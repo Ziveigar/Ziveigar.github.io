@@ -76,112 +76,44 @@
     <article id="post-markdown_introduction" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/10/07/markdown_introduction/" class="article-date">
-  <time class="dt-published" datetime="2023-10-07T07:39:23.466Z" itemprop="datePublished">2023-10-07</time>
+  <time class="dt-published" datetime="2023-10-06T16:00:00.000Z" itemprop="datePublished">2023-10-07</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/web-pages/">web pages</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/10/07/markdown_introduction/">markdown使用说明</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="markdown使用说明"><a href="#markdown使用说明" class="headerlink" title="markdown使用说明"></a>markdown使用说明</h1><h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><h3 id="1-1描述"><a href="#1-1描述" class="headerlink" title="1.1描述"></a>1.1描述</h3><p>一共有六级标题，在文本前加一个#井号代表一级标题，###为三级，以此类推，注意#井号和文本之间有空格才生效。</p>
-<h3 id="1-2快捷键（好奇怪，所有的数字和符号都不能用小键盘）"><a href="#1-2快捷键（好奇怪，所有的数字和符号都不能用小键盘）" class="headerlink" title="1.2快捷键（好奇怪，所有的数字和符号都不能用小键盘）"></a>1.2快捷键（好奇怪，所有的数字和符号都不能用小键盘）</h3><p>【Ctrl+1<del>6】快速将所选文本变换为1</del>6级标题</p>
-<p>【Ctrl+加号&#x2F;减号】可以对标题级别进行升降，不需要选中内容（P.S.不是数字区域的那个，是退格键左边那俩）</p>
-<h2 id="二、段落"><a href="#二、段落" class="headerlink" title="二、段落"></a>二、段落</h2><h3 id="1-换行"><a href="#1-换行" class="headerlink" title="1.换行"></a>1.换行</h3><p>【Enter】直接换行</p>
-<p>【Shift+Enter】小换行，行与行之间间隔变小（P.S. 在markdown界面最下方启用源代码模式，可以看到实际上enter是换两行，shift+enter是换一行）</p>
-<h3 id="2-分割线"><a href="#2-分割线" class="headerlink" title="2.分割线"></a>2.分割线</h3><p>【三个“-”+Enter】或【***+Enter】不推荐星号，因为输入三个会自动变为四个，需要手动删除</p>
-<h2 id="三、文字显示"><a href="#三、文字显示" class="headerlink" title="三、文字显示"></a>三、文字显示</h2><h3 id="1-字体"><a href="#1-字体" class="headerlink" title="1.字体"></a>1.字体</h3><h4 id="1-1代码"><a href="#1-1代码" class="headerlink" title="1.1代码"></a>1.1代码</h4><p>【**  **】粗体</p>
-<p>【~ ~】<u>删除线</u></p>
-<p>【<u>  </u>】下划线（这个是html超量语言，不是markdown的轻量）</p>
-<p>【* *】斜体</p>
-<p>【&#x3D;&#x3D; &#x3D;&#x3D;】  &#x3D;&#x3D;高亮&#x3D;&#x3D;</p>
-<h4 id="1-2出现问题了"><a href="#1-2出现问题了" class="headerlink" title="1.2出现问题了"></a>1.2出现问题了</h4><p>Q：像上文，同一行里想出现两处有间断的高亮，但是系统默认合并，怎么办</p>
-<p>A：转义符“\”能够有效解决这个方法，在不需要被识别为代码的符号前加一个\就可以了，同时，转义符自身也可以被转义。使用效果如下：【=&#x3D; =&#x3D;】 &#x3D;&#x3D;高亮&#x3D;&#x3D;</p>
-<h4 id="1-3快捷键"><a href="#1-3快捷键" class="headerlink" title="1.3快捷键"></a>1.3快捷键</h4><p>【Ctrl+B】粗体</p>
-<p>【Ctrl+U】下划线</p>
-<p>【Ctrl+I】斜体</p>
-<p>【Shift+Alt+5】删除线</p>
-<h3 id="2-上下标"><a href="#2-上下标" class="headerlink" title="2.上下标"></a>2.上下标</h3><h4 id="2-1代码"><a href="#2-1代码" class="headerlink" title="2.1代码"></a>2.1代码</h4><p>【^ ^】上标（【X^2^】&gt;&gt;&gt; X^2^ ）</p>
-<p>【~  ~】下标（【X~1~】&gt;&gt;&gt; X<del>1</del> ）</p>
-<h4 id="2-2好像又出问题了"><a href="#2-2好像又出问题了" class="headerlink" title="2.2好像又出问题了"></a>2.2好像又出问题了</h4><p>如果同时输入上下标，不会出现我们期待的上下标并列，而是有左右偏移，难看，需要用到数学公式输入</p>
-<h2 id="四、列表"><a href="#四、列表" class="headerlink" title="四、列表"></a>四、列表</h2><h3 id="1-无序列表"><a href="#1-无序列表" class="headerlink" title="1.无序列表"></a>1.无序列表</h3><p>【*&#x2F;-&#x2F;+ + space】</p>
-<ul>
-<li>使用<ul>
-<li>哈哈<ul>
-<li>哈哈</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>【Ctrl+ [ &#x2F; ] 】上升&#x2F;下降列表级别</p>
-<p>列表永远是双空格退出列表模式</p>
-<h3 id="2-有序列表"><a href="#2-有序列表" class="headerlink" title="2.有序列表"></a>2.有序列表</h3><p>【num + . + space】</p>
-<p>主要目的：不仅待缩进，还要带数字</p>
-<p>Q：如何有序和无序列表混合？上面是数字，里面是可缩进的点为开头</p>
-<p>A：先有序，然后在第二层把数字删掉，再按照无序列表语法在有序列表的子列表部署无序列表</p>
-<h3 id="3-任务列表"><a href="#3-任务列表" class="headerlink" title="3.任务列表"></a>3.任务列表</h3><p>【无序列表+[ ] 】一个可以打勾的方框</p>
-<ul>
-<li><input disabled="" type="checkbox"> 和雅雅说谢谢</li>
-</ul>
-<h2 id="五、区块"><a href="#五、区块" class="headerlink" title="五、区块"></a>五、区块</h2><p>【&gt; + space】</p>
-<blockquote>
-<p>区块有什么作用？</p>
-<blockquote>
-<p>可以用作Q&amp;A，区分不同问题</p>
-</blockquote>
-<blockquote>
-<p>也可以用作不想加标题时候的分段，确实好用</p>
-</blockquote>
-</blockquote>
-<h2 id="六、代码"><a href="#六、代码" class="headerlink" title="六、代码"></a>六、代码</h2><p>行内代码：【` `】就会出现下面加底纹的，但是注意是英文模式的&#96;&#96;，不是中文的· ·</p>
-<p>代码块：【`&#96;&#96; + 语言种类（可选）+ Enter】可以输入代码，快捷键【Ctrl+Shift+K】，代码块可以选择插入代码的语言(C还是C++还是python等等)</p>
-<p>可以使用 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="七、链接"><a href="#七、链接" class="headerlink" title="七、链接"></a>七、链接</h2><p>链接可以直接复制，直接跳转需要按住Ctrl再点击。</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
-<p>&gt;&gt;&gt; <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
-</blockquote>
-<blockquote>
-<p>[百度一下](<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com\</a>)</p>
-<p>&gt;&gt;&gt; <a href="www.baidu.com">百度一下</a></p>
-</blockquote>
-<blockquote>
-<p>[百度一下](<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> &quot;<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a>“)</p>
-<p> &gt;&gt;&gt;<a href="www.baidu.com" title="https://www.baidu.com">百度一下</a></p>
-</blockquote>
-<p>2和3的区别在于，3在光标放到链接上时，有提示文字</p>
-<blockquote>
-<p>[跳转标题1](##一、标题)</p>
-<p>&gt;&gt;&gt;<a href="##%E4%B8%80%E3%80%81%E6%A0%87%E9%A2%98">跳转标题1</a></p>
-</blockquote>
-<p>注意：文内链接跳转标题时，井号和标题之间没有空格</p>
-<h2 id="八、脚注"><a href="#八、脚注" class="headerlink" title="八、脚注"></a>八、脚注</h2><blockquote>
-<p>文本[^1]</p>
-<p>&gt;&gt;&gt;文本[^1]</p>
-<p>[^1]:这是说明</p>
-<p>&gt;&gt;&gt;[^1]:这是说明</p>
-</blockquote>
-<p>把光标放到原文脚注上的时候会发现说明，点击的时候也可以跳转。</p>
-<p>&lt;br&gt;是用来换行的（强制的）符号，保证换行但是不跳出脚注，用于多行脚注，可以在偏好设置-Markdown里点击是否显示&lt;br&gt;，目前为了看懂代码，选择的显示</p>
-<h2 id="九、图片"><a href="#九、图片" class="headerlink" title="九、图片"></a>九、图片</h2><blockquote>
-<p>图片和链接格式很像，多了个！</p>
-<p>代码：【！[不显示的文字] ”图片路径” (“图片标题”)】</p>
-<p>&gt;&gt;&gt;<img src="C:\Users\唐\Desktop\存图\微信图片_20230802011142.jpg" alt="evelyn" title="My Angel" style="zoom: 25%;" /></p>
-</blockquote>
-
+        <p>本篇为markdown主要使用说明，不包括hexo使用说明</p>
+        
+          <p class="article-more-link">
+            <a href="/2023/10/07/markdown_introduction/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/07/markdown_introduction/" data-id="clnfwekiz000000wi62zi9ho9" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/10/07/markdown_introduction/" data-id="clnfwekiz000000wi62zi9ho9" data-title="markdown使用说明" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li></ul>
+
     </footer>
   </div>
   
@@ -300,13 +232,20 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/web-pages/">web pages</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quant/" rel="tag">Quant</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quant/" rel="tag">Quant</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li></ul>
     </div>
   </div>
 
@@ -316,7 +255,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Quant/" style="font-size: 10px;">Quant</a>
+      <a href="/tags/Quant/" style="font-size: 10px;">Quant</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a>
     </div>
   </div>
 
@@ -338,7 +277,7 @@
       <ul>
         
           <li>
-            <a href="/2023/10/07/markdown_introduction/">(no title)</a>
+            <a href="/2023/10/07/markdown_introduction/">markdown使用说明</a>
           </li>
         
           <li>

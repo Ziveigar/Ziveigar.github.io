@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>量化之计算机 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="量化之计算机一、行业常识 kaggle  在线平台，factor on 数据发掘和预测。   平时是众包平台，有项目  公司负责提供数据，要回收实际解决问题的方案 参赛者选问题给方案，并收获奖金  每年举办一次大规模竞赛  高额奖金，data science大佬云集 分为竞争激烈的Featured和平民化的Research，featured为实际案例，没有标准答案，练习赛有官方的标准参考方案可以对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="量化之计算机">
+<meta property="og:url" content="http://example.com/2023/10/07/%E9%87%8F%E5%8C%96%E4%B9%8B%E8%AE%A1%E7%AE%97%E6%9C%BA/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="量化之计算机一、行业常识 kaggle  在线平台，factor on 数据发掘和预测。   平时是众包平台，有项目  公司负责提供数据，要回收实际解决问题的方案 参赛者选问题给方案，并收获奖金  每年举办一次大规模竞赛  高额奖金，data science大佬云集 分为竞争激烈的Featured和平民化的Research，featured为实际案例，没有标准答案，练习赛有官方的标准参考方案可以对">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/AppData/Roaming/Typora/typora-user-images/image-20231007201358707.png%22%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE%22">
+<meta property="article:published_time" content="2023-10-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-08T02:04:11.912Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="algorithm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/AppData/Roaming/Typora/typora-user-images/image-20231007201358707.png%22%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE%22">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-量化之计算机" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/10/07/%E9%87%8F%E5%8C%96%E4%B9%8B%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="article-date">
+  <time class="dt-published" datetime="2023-10-06T16:00:00.000Z" itemprop="datePublished">2023-10-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/quant/">quant</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      量化之计算机
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="量化之计算机"><a href="#量化之计算机" class="headerlink" title="量化之计算机"></a>量化之计算机</h1><h2 id="一、行业常识"><a href="#一、行业常识" class="headerlink" title="一、行业常识"></a>一、行业常识</h2><blockquote>
+<p>kaggle</p>
+<blockquote>
+<p>在线平台，factor on 数据发掘和预测。</p>
+</blockquote>
+<blockquote>
+<p>平时是众包平台，有项目</p>
+<blockquote>
+<p>公司负责提供数据，要回收实际解决问题的方案</p>
+<p>参赛者选问题给方案，并收获奖金</p>
+</blockquote>
+<p>每年举办一次大规模竞赛</p>
+<blockquote>
+<p>高额奖金，data science大佬云集</p>
+<p>分为竞争激烈的Featured和平民化的Research，featured为实际案例，没有标准答案，练习赛有官方的标准参考方案可以对比</p>
+<p>通过出题放给予的训练集建立模型，用测试集算出结果进行评比</p>
+<p>不断的推翻自己，才能碾压别人</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>需要的基础技能</p>
+<p>data science入门，python和R任选其一，对成绩有更高追求则feature engineering（特征工程）必不可少</p>
+<p>可以先做101和playground的训练赛，再上手</p>
+<p>先做量小的项目，不会耗时太久，出结果快。对机器性能要求也不高</p>
+<p>Random Forest和Logistic Regression模型，Gradient Boosting基础好一点的可以学，可视化效果会好很多。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25686876">Kaggle入门，看这一篇就够了 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+</blockquote>
+<h2 id="二、计算机语言"><a href="#二、计算机语言" class="headerlink" title="二、计算机语言"></a>二、计算机语言</h2><h2 id="2-1-你的python篇"><a href="#2-1-你的python篇" class="headerlink" title="2.1 你的python篇"></a>2.1 你的python篇</h2><h2 id="2-2你的R语言篇"><a href="#2-2你的R语言篇" class="headerlink" title="2.2你的R语言篇"></a>2.2你的R语言篇</h2><h2 id="三、思维及算法"><a href="#三、思维及算法" class="headerlink" title="三、思维及算法"></a>三、思维及算法</h2><blockquote>
+<p>动态规划思维</p>
+<blockquote>
+<p>在寻找最优解的过程中，首先你要考虑的还是可视化，或者说让自己的思路变得清晰，动态规划有一个很常用的方法就是建立有向无环图</p>
+</blockquote>
+<blockquote>
+<p>例题：给定序列，寻找最长递增子序列<u>的长度</u></p>
+<p>【3 1 8 2 5】&gt;&gt;&gt;长度为3，最长子序列为【1 2 5】</p>
+<p><img src="/../../../../AppData/Roaming/Typora/typora-user-images/image-20231007201358707.png%22%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE%22" alt="image-20231007201358707"></p>
+<p>于是问题变化为只要需要寻找最长路径即可</p>
+</blockquote>
+<blockquote>
+<p>可视化之后应该如何思考问题我们要求的长度呢？</p>
+<p>核心：递推思维</p>
+<p>以序列号0为终点的子序列最长长度为1，即LIS[0]&#x3D;1，类推LIS[1]&#x3D;1,LIS[2]的话，由于一步到达它的路线有两条，分别是索引0和索引1，LIS[2]&#x3D;1+max{LIS[0],LIS[1]}</p>
+</blockquote>
+<blockquote>
+<p>用这种思维计算得到所有的LIS[n]，遍历最大值即可，但是是否可以继续优化程序时间</p>
+<p>比如可以先比较大小，比我们需要的LIS[n]大的值的LIS就不用计算，比如计算LIS[4]时候就不用考虑LIS[2]</p>
+</blockquote>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/10/07/%E9%87%8F%E5%8C%96%E4%B9%8B%E8%AE%A1%E7%AE%97%E6%9C%BA/" data-id="clngtmv75000014wi18wsdwfl" data-title="量化之计算机" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/10/07/markdown_introduction/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          markdown使用说明
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/10/05/quant%20problems/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">My new post</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/quant/">quant</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-pages/">web pages</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quant/" rel="tag">Quant</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/motivation/" rel="tag">motivation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wish/" rel="tag">wish</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Quant/" style="font-size: 10px;">Quant</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/motivation/" style="font-size: 10px;">motivation</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/wish/" style="font-size: 10px;">wish</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/10/08/%E6%97%A5%E8%AE%B0/">日记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/07/markdown_introduction/">markdown使用说明</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/07/%E9%87%8F%E5%8C%96%E4%B9%8B%E8%AE%A1%E7%AE%97%E6%9C%BA/">量化之计算机</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/05/quant%20problems/">My new post</a>
+          </li>
+        
+          <li>
+            <a href="/2023/10/05/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="国家综合立体交通网6轴7廊8通道、全国物流大通道与国家级节点交互地图。">
+  <title>全国交通与物流地图</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23193b61'/%3E%3Cpath d='M8 9L24 14L12 24Z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Cg fill='%23fff'%3E%3Ccircle cx='8' cy='9' r='3'/%3E%3Ccircle cx='24' cy='14' r='3'/%3E%3Ccircle cx='12' cy='24' r='3'/%3E%3C/g%3E%3C/svg%3E">
+  <style>
+    *{box-sizing:border-box}body{margin:0;color:#1d2937;background:#f4f6f8;font:16px/1.5 "Microsoft YaHei",system-ui,sans-serif}header{display:flex;align-items:center;flex-wrap:wrap;gap:10px 24px;padding:12px 20px;background:#fff;border-bottom:1px solid #dce2e8}h1{margin:0;font-size:18px;font-weight:600;white-space:nowrap}nav{display:flex;gap:6px;flex-wrap:wrap}a{color:#193b61;text-decoration:none}nav a{padding:7px 12px;border-radius:5px;font-size:15px}nav a[aria-current="page"]{color:#fff;background:#193b61}nav a:hover{background:#e8eef5}nav a[aria-current="page"]:hover{background:#264f7d}.actions{margin-left:auto;display:flex;gap:18px;font-size:14px}a:focus-visible{outline:2px solid #2a77c9;outline-offset:3px}main{width:100%}iframe{display:block;width:100%;height:calc(100vh - 70px);min-height:950px;border:0;background:#fff}[hidden]{display:none!important}.no-script{padding:16px}@media(max-width:680px){header{padding:12px;gap:10px}h1{width:100%;font-size:17px}.actions{margin-left:0}nav a{padding:7px 10px}iframe{min-height:950px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>全国交通与物流地图</h1>
+    <nav aria-label="地图选择">
+      <a id="transport-tab" href="?map=transport" aria-current="page">6轴7廊8通道</a>
+      <a id="logistics-tab" href="?map=logistics">物流大通道与国家级节点</a>
+    </nav>
+    <div class="actions"><a id="full-page" href="transport.html" target="_blank" rel="noopener">独立打开</a><a id="download-image" href="transport.png" download="6轴7廊8通道与国家级物流节点关系图.png">下载高清图片</a></div>
+  </header>
+  <main>
+    <iframe id="transport-map" title="国家综合立体交通网主骨架：6轴7廊8通道" src="transport.html"></iframe>
+    <iframe id="logistics-map" title="全国物流大通道与国家级节点关系图" hidden></iframe>
+  </main>
+  <noscript><p class="no-script"><a href="transport.html">打开6轴7廊8通道地图</a> · <a href="logistics.html">打开全国物流大通道地图</a></p></noscript>
+  <script>
+    (()=>{
+      const names={transport:'6轴7廊8通道与国家级物流节点关系图.png',logistics:'全国物流大通道与国家级节点关系图.png'};
+      function choose(kind,push){
+        if(!Object.hasOwn(names,kind))kind='transport';
+        for(const key of Object.keys(names)){
+          const frame=document.getElementById(key+'-map'),tab=document.getElementById(key+'-tab');
+          frame.hidden=key!==kind;
+          if(key===kind){tab.setAttribute('aria-current','page');if(!frame.getAttribute('src'))frame.src=key+'.html';}else tab.removeAttribute('aria-current');
+        }
+        document.getElementById('full-page').href=kind+'.html';
+        const download=document.getElementById('download-image');download.href=kind+'.png';download.download=names[kind];
+        if(push){const url=new URL(location.href);url.searchParams.set('map',kind);history.pushState({map:kind},'',url);}
+      }
+      for(const key of Object.keys(names))document.getElementById(key+'-tab').addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();choose(key,true);});
+      window.addEventListener('popstate',()=>choose(new URLSearchParams(location.search).get('map'),false));
+      choose(new URLSearchParams(location.search).get('map'),false);
+    })();
+  </script>
+</body>
+</html>

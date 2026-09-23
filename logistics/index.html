@@ -23,19 +23,20 @@
     <iframe id="transport-map" title="国家综合立体交通网主骨架：6轴7廊8通道" src="transport.html"></iframe>
     <iframe id="logistics-map" title="全国物流大通道与国家级节点关系图" hidden></iframe>
   </main>
-  <noscript><p class="no-script"><a href="transport.html">打开6轴7廊8通道地图</a> · <a href="logistics.html">打开全国物流大通道地图</a></p></noscript>
+  <noscript><p class="no-script"><a href="transport.html">打开6轴7廊8通道地图</a> · <a href="logistics.html?v=20260923-geofix">打开全国物流大通道地图</a></p></noscript>
   <script>
     (()=>{
       const names={transport:'6轴7廊8通道与国家级物流节点关系图.png',logistics:'全国物流大通道与国家级节点关系图.png'};
+      const asset=(kind,extension)=>kind+'.'+extension+(kind==='logistics'?'?v=20260923-geofix':'');
       function choose(kind,push){
         if(!Object.hasOwn(names,kind))kind='transport';
         for(const key of Object.keys(names)){
           const frame=document.getElementById(key+'-map'),tab=document.getElementById(key+'-tab');
           frame.hidden=key!==kind;
-          if(key===kind){tab.setAttribute('aria-current','page');if(!frame.getAttribute('src'))frame.src=key+'.html';}else tab.removeAttribute('aria-current');
+          if(key===kind){tab.setAttribute('aria-current','page');if(!frame.getAttribute('src'))frame.src=asset(key,'html');}else tab.removeAttribute('aria-current');
         }
-        document.getElementById('full-page').href=kind+'.html';
-        const download=document.getElementById('download-image');download.href=kind+'.png';download.download=names[kind];
+        document.getElementById('full-page').href=asset(kind,'html');
+        const download=document.getElementById('download-image');download.href=asset(kind,'png');download.download=names[kind];
         if(push){const url=new URL(location.href);url.searchParams.set('map',kind);history.pushState({map:kind},'',url);}
       }
       for(const key of Object.keys(names))document.getElementById(key+'-tab').addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();choose(key,true);});
